@@ -1,0 +1,43 @@
+@use '../mixins/breakpoints' as *;
+
+.Header {
+  padding: clamp(2.5rem, 2.066vw + 2.016rem, 3.875rem) 0;
+
+  margin-bottom: clamp(1.5rem, 5.915vw + 0.114rem, 5.438rem);
+  position: relative;
+
+  &-nav {
+    display: flex;
+    justify-content: space-between;
+
+    position: static;
+
+    @media (min-width: 1110px) {
+      position: relative;
+    }
+  }
+
+  &-bgSvg {
+    display: none;
+    width: 312px;
+    height: 468px;
+
+    position: absolute;
+    right: -130px;
+    top: -50px;
+
+    @include breakpoint(s) {
+      display: inline-block;
+    }
+
+    @media (min-width: 1110px) {
+      right: 0;
+      top: -100px;
+    }
+  }
+
+  &-logo {
+    max-width: 9.125rem;
+    max-height: 2rem;
+  }
+}
