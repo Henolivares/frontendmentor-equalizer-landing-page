@@ -1,0 +1,12 @@
+.Plan {
+  &-content {
+    background-color: var(--clr-dark-blue);
+    display: grid;
+    justify-items: center;
+  }
+
+  &-imgWrapper {
+    max-width: 13rem;
+    max-height: 26.875rem;
+  }
+}

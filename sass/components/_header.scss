@@ -1,38 +1,29 @@
 @use '../mixins/breakpoints' as *;
 
 .Header {
-  padding: clamp(2.5rem, 2.066vw + 2.016rem, 3.875rem) 0;
-
-  margin-bottom: clamp(1.5rem, 5.915vw + 0.114rem, 5.438rem);
-  position: relative;
+  padding-top: clamp(2.5rem, 2.876vw + 1.826rem, 3.875rem);
+  padding-bottom: clamp(4rem, 8.235vw + 2.07rem, 7.938rem);
 
   &-nav {
-    display: flex;
-    justify-content: space-between;
+    position: relative;
 
-    position: static;
+    &::before {
+      display: none;
+      border: 1px solid red;
+      content: '';
+      max-width: 24rem;
+      min-width: 20rem;
+      aspect-ratio: 1 / 1;
+      background-color: red;
 
-    @media (min-width: 1110px) {
-      position: relative;
-    }
-  }
-
-  &-bgSvg {
-    display: none;
-    width: 312px;
-    height: 468px;
-
-    position: absolute;
-    right: -130px;
-    top: -50px;
-
-    @include breakpoint(s) {
-      display: inline-block;
-    }
-
-    @media (min-width: 1110px) {
-      right: 0;
-      top: -100px;
+      opacity: 0.35;
+      background: #ff7b40;
+      filter: blur(67.95704650878906px);
+      position: absolute;
+      top: -200px;
+      left: -15rem;
+      top: -10rem;
+      z-index: -1;
     }
   }
 

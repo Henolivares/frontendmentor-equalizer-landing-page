@@ -22,7 +22,7 @@
 
 @supports (font-size: clamp(1rem, 1vw, 1rem)) {
   :root {
-    --fs-heading-l: clamp(2.5rem, 4.507vw + 1.444rem, 5.5rem);
+    --fs-heading-l: clamp(2.5rem, 5.229vw + 1.275rem, 5rem);
     --fs-heading-m: clamp(2rem, 0.751vw + 1.824rem, 2.5rem);
     --fs-body-primary: clamp(1rem, 0.376vw + 0.912rem, 1.25rem);
   }
@@ -36,7 +36,7 @@
   }
   @media screen and (min-width: 1100px) {
     :root {
-      --fs-heading-l: 5.5rem;
+      --fs-heading-l: 5rem;
       --fs-heading-m: 2.5rem;
       --fs-body-primary: 1.25rem;
     }

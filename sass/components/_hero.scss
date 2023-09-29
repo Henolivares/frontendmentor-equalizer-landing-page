@@ -1,0 +1,56 @@
+.Hero {
+  overflow-x: clip;
+  &-content {
+    width: min(51.5625rem, 90%);
+    font-size: var(--fs-heading-l);
+    color: var(--clr-body);
+
+    position: relative;
+
+    padding-bottom: 1.5em;
+
+    &::before,
+    &::after {
+      border: 1px solid red;
+      content: '';
+      max-width: 24rem;
+      min-width: 20rem;
+      aspect-ratio: 1 / 1;
+      background-color: red;
+
+      opacity: 0.35;
+
+      filter: blur(67.95704650878906px);
+      position: absolute;
+      right: -10rem;
+    }
+
+    &::before {
+      z-index: -2;
+      background: #40fff6;
+      top: -15rem;
+    }
+
+    &::after {
+      z-index: -1;
+      background: #ff7b40;
+      top: 0;
+    }
+  }
+
+  &-h1 {
+    font-size: var(--fs-heading-l);
+    font-weight: var(--fw-bold);
+    line-height: var(--lh-heading-l);
+
+    margin-bottom: 0.5em;
+
+    position: relative;
+  }
+
+  &-p {
+    font-size: var(--fs-body-primary);
+    font-weight: var(--fw-regular);
+    line-height: var(--lh-body);
+  }
+}
