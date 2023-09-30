@@ -1,0 +1,70 @@
+@use '../mixins/breakpoints' as *;
+
+.Footer {
+  margin-bottom: 30px;
+
+  @include breakpoint(m) {
+    margin-top: 100px;
+  }
+
+  @include breakpoint(l) {
+    margin-top: 8.125rem;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    @include breakpoint(m) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &-left {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 60ch;
+
+    @include breakpoint(m) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @include breakpoint(l) {
+      gap: 72px;
+    }
+  }
+
+  &-logo {
+    max-width: 146px;
+    max-height: 32px;
+  }
+
+  &-p {
+    display: grid;
+  }
+
+  &-email {
+    font-weight: var(--fw-bold);
+  }
+
+  &-ul {
+    display: flex;
+    gap: 1.25rem;
+  }
+
+  &-a {
+    fill: var(--clr-dark-blue);
+    &:hover {
+      fill: var(--clr-orange);
+    }
+  }
+
+  &-icon {
+    width: 20px;
+    aspect-ratio: 1 / 1;
+  }
+}

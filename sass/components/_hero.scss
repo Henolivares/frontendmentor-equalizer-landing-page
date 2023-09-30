@@ -1,7 +1,49 @@
+@use '../mixins/breakpoints' as *;
+
 .Hero {
   overflow-x: clip;
+
+  & .u-wrapper {
+    position: relative;
+    &::after {
+      display: none;
+      content: '';
+      position: absolute;
+      top: -250px;
+      z-index: -1;
+      width: 110%;
+      height: 200%;
+      // background-color: red;
+      background-image: url('./bg-pattern-1.svg');
+      background-position: top right;
+      background-repeat: no-repeat;
+      background-size: 16.625rem 25rem;
+
+      @include breakpoint(m) {
+        display: block;
+        top: -230px;
+      }
+
+      @include breakpoint(l) {
+        display: block;
+        width: 110%;
+        background-size: 19.5rem 29.25rem;
+        top: -270px;
+      }
+    }
+  }
+
   &-content {
-    width: min(51.5625rem, 90%);
+    width: 100%;
+
+    @include breakpoint(m) {
+      width: 77%;
+    }
+
+    @include breakpoint(l) {
+      width: 80%;
+    }
+
     font-size: var(--fs-heading-l);
     color: var(--clr-body);
 
@@ -11,7 +53,6 @@
 
     &::before,
     &::after {
-      border: 1px solid red;
       content: '';
       max-width: 24rem;
       min-width: 20rem;
@@ -33,7 +74,7 @@
 
     &::after {
       z-index: -1;
-      background: #ff7b40;
+
       top: 0;
     }
   }
